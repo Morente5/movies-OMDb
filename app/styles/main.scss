@@ -1,8 +1,12 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Exo+2:400,600');
+$exo-2-font: 'Exo 2', sans-serif;
 $icon-font-path: '../fonts/';
 
+// Colors
 $bg-color: #1e252c;
-
-
+$bg-accent-color: #263038;
+$accent-color: #48CFAD;
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
@@ -11,9 +15,9 @@ $bg-color: #1e252c;
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: $bg-color;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: $bg-color;
 }
 
 
