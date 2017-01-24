@@ -74,6 +74,11 @@ gulp.task('fonts', () => {
     .pipe($.if(dev, gulp.dest('.tmp/fonts'), gulp.dest('dist/fonts')));
 });
 
+gulp.task('bower', function() {
+  return bower({ cmd: 'update'})
+    .pipe(gulp.dest('vendor/'))
+});
+
 gulp.task('extras', () => {
   return gulp.src([
     'app/*',
