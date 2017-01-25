@@ -24,6 +24,35 @@ h1, h2, h3 ,h4 ,h5, h6 {
 	font-weight: 600;
 }
 
+// NAV
+.navbar {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 0;
+	border-radius: 0;
+	margin-bottom: 0;
+	background-color: $bg-color;
+}
+.navbar-nav a, a.navbar-brand {
+	color: white !important;
+}
+.navbar-nav a:hover {
+		color: $accent-color !important;
+}
+
+.home-icon {
+	height: 50px;
+	width: 50px;
+	margin-right: 10px;
+}
+.fl-left {
+	float: left;
+}
+.fa {
+	font-size: 1.6em;
+	vertical-align: middle;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
 
