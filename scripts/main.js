@@ -1,1 +1,1 @@
-"use strict";$(".poster").on({mouseenter:function(){$(this).find(".poster-desc").stop().animate({height:"100%"},200)},mouseleave:function(){$(this).find(".poster-desc").stop().animate({height:0},200)}});
+"use strict";$(".poster").on({mouseenter:function(){$(this).find(".poster-desc").stop().animate({height:"100%"},200)},mouseleave:function(){$(this).find(".poster-desc").stop().animate({height:0},200)}}),$("#search-btn, #adv-search-btn").click(function(e){e.preventDefault(),$("#search-container").empty()});
