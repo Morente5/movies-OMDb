@@ -55,7 +55,7 @@ var page = 0;
 var pageTotal = 0;
 var scrollable = false;
 
-const URL = 'http://www.omdbapi.com/?';
+const URL = 'https://www.omdbapi.com/?';
 var params = '';
 
 $(document).ajaxStart( () => $('.spinner').show() );
