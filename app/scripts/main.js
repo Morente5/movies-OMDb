@@ -47,6 +47,25 @@ function reloadEvents() {
 				$(this).find('.poster-desc').stop().animate({
 					'height': 0
 				}, 200);
+			},
+			click: function() {
+				var id = $(this).attr('id');
+				$.getJSON('https://www.omdbapi.com/?i=' + id, data => {
+					$('#modal-title, #modal-type, #modal-year, #modal-country, #modal-genre, #modal-director, #modal-writer, #modal-cast, #modal-plot').empty();
+					$('#modal-title').text(data.Title);
+					$('#modal-type').text(data.Type);
+					$('#modal-year').text(data.Year);
+					$('#modal-country').text(data.Country);
+					$('#modal-genre').text(data.Genre);
+					$('#modal-director').text(data.Director);
+					$('#modal-writer').text(data.Writer);
+					$('#modal-cast').text(data.Cast);
+					$('#modal-plot').text(data.Plot);
+					$('#modal-link').attr('href', 'https://www.imdb.com/title/' + id)
+									.attr('target','_blank');
+
+				})
+				.then( () => $('#myModal').modal() );
 			}
 		});
 }
@@ -62,6 +81,11 @@ $(document).ajaxStart( () => $('.spinner').show() );
 $(document).ajaxStop( () => $('.spinner').hide() );
 
 reloadEvents();
+
+$("#input-title")
+	.bind('keypress', event => {
+		if (event.keyCode == 13) $("#search-btn").click();  // ENTER key simulates pressing search button
+	});
 
 $('#search-btn, #adv-search-btn')
 	.click( event => {

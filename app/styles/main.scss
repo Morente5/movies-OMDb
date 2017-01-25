@@ -188,6 +188,16 @@ h1, h2, h3 ,h4 ,h5, h6 {
     z-index: -1000;
 }
 
+.modal {
+	color: black;
+}
+
+#modal-link {
+	background-color: $accent-color;
+	border: 0;
+	color: white;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
 	#adv-search {
