@@ -12,14 +12,17 @@ $accent-color: #48CFAD;
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-
-/* Space out content a bit */
 body {
-	padding-top: 20px;
-	padding-bottom: 20px;
+	font-family: $exo-2-font;
+	font-weight: normal;
 	background-color: $bg-color;
+	color: white !important;
 }
 
+h1, h2, h3 ,h4 ,h5, h6 {
+	font-family: $exo-2-font;
+	font-weight: 600;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
