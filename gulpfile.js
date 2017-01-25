@@ -6,6 +6,8 @@ const del = require('del');
 const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
 const ghPages = require('gulp-gh-pages');
+const bower = require('gulp-bower');
+const sass = require('gulp-sass');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -75,9 +77,19 @@ gulp.task('fonts', () => {
     .pipe($.if(dev, gulp.dest('.tmp/fonts'), gulp.dest('dist/fonts')));
 });
 
+gulp.task('icons', function() {
+    return gulp.src('./bower_components/components-font-awesome/fonts/**.*')
+        .pipe(gulp.dest('dist/fonts'));
+});
+
+gulp.task('glyphicons', function() {
+    return gulp.src('./bower_components/bootstrap-sass/assets/fonts/**.*')
+        .pipe(gulp.dest('dist/fonts'));
+});
+
 gulp.task('bower', function() {
   return bower({ cmd: 'update'})
-    .pipe(gulp.dest('vendor/'))
+    .pipe(gulp.dest('./bower_components'))
 });
 
 gulp.task('extras', () => {
@@ -163,7 +175,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'icons', 'glyphicons', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
