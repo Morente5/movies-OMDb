@@ -53,7 +53,66 @@ h1, h2, h3 ,h4 ,h5, h6 {
 	vertical-align: middle;
 }
 
+// SEARCH
+.dropdown.dropdown-lg .dropdown-menu {
+		margin-top: -1px;
+		padding: 6px 20px;
+		background-color: $bg-accent-color;
+		background-clip: border-box;
+}
+.dropdown-toggle {
+	border: 0;
+	border-radius:0;
+	height: 34px;
+	background-color: white;
+}
+.input-group-btn .btn-group {
+	display: flex !important;
+	border: 0;
+	border-radius: 4;
+}
+.btn-group .btn {
+	border-radius: 4;
+	margin-left: -1px;
+}
+.btn-group .btn:last-child {
+	border: 0;
+	border-radius: 2;
+}
+.btn-group .form-horizontal .btn[type="submit"] {
+	border: 0;
+	border-radius: 2;
+}
+.btn-primary {
+	background-color: $accent-color;
+}
+
+.form-horizontal{
+	padding: 10px 0 10px 0;
+}
+.form-horizontal .form-group {
+	margin-left: 0;
+	margin-right: 0;
+	border: 0;
+	border-radius: 4;
+}
+.form-control {
+	border: 0;
+	border-radius: 4px !important;
+	background-color: white;
+}
+
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-
+	#adv-search {
+			width: 500px;
+			margin: 0 auto;
+	}
+	.dropdown.dropdown-lg {
+			position: static !important;
+	}
+	.dropdown.dropdown-lg .dropdown-menu {
+			min-width: 500px;
+	}
 }
